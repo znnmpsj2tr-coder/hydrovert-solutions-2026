@@ -6,6 +6,7 @@ import { ArrowRight, Droplets, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
+  { href: "/terrain", label: "Étudier mon terrain" },
   { href: "/hydroseeding", label: "Hydroseeding" },
   { href: "/hydromulching", label: "Hydromulching" },
   { href: "/applications", label: "Applications" },
@@ -40,7 +41,7 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-7 text-sm font-medium text-white/85 lg:flex">
-          {links.map((link) => <Link key={link.href} href={link.href} className="transition hover:text-[#c9efa6]">{link.label}</Link>)}
+            {links.map((link) => <Link key={link.href} href={link.href} className="transition hover:text-[#c9efa6]">{link.label}</Link>)}
         </div>
 
         <div className="flex items-center gap-2">

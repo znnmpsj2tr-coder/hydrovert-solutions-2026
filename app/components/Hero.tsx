@@ -20,6 +20,7 @@ export default function Hero() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3 sm:gap-4">
             <Link href="/devis" className="inline-flex items-center gap-2 rounded-full bg-[#c0ea93] px-6 py-3.5 font-bold text-[#10271d] transition hover:-translate-y-0.5 hover:bg-white">Parler de votre projet <ArrowRight size={18} /></Link>
+            <Link href="/terrain" className="rounded-full border border-[#c9efa6]/60 bg-[#10271d]/30 px-6 py-3.5 font-semibold text-[#e8f8d9] transition hover:-translate-y-0.5 hover:bg-[#c9efa6]/15">Étudier mon terrain</Link>
             <Link href="#pourquoi-nous" className="rounded-full border border-white/35 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10">Pourquoi nous choisir</Link>
           </div>
           <div className="mt-10 flex flex-wrap gap-x-5 gap-y-3 border-t border-white/20 pt-5 text-sm text-white/80">
