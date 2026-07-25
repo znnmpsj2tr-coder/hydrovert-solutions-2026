@@ -1,0 +1,11 @@
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
+const services = [
+  { label: "Hydroseeding", title: "Végétaliser vite, avec une solution adaptée.", text: "Une projection hydraulique pour couvrir efficacement talus, chantiers, grandes surfaces et zones difficiles d’accès.", href: "/hydroseeding" },
+  { label: "Hydromulching", title: "Renforcer la tenue des sols sensibles.", text: "Une protection végétale renforcée lorsque l’humidité, la pente ou le risque d’érosion demandent une attention particulière.", href: "/hydromulching" },
+];
+
+export default function Services() {
+  return <section className="bg-white py-20 sm:py-24 lg:py-28"><div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12"><div className="flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="text-xs font-bold uppercase tracking-[0.24em] text-[#4f7e31]">Nos solutions</p><h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-[-0.04em] text-[#18241d] sm:text-5xl">La technique suit toujours le besoin du terrain.</h2></div><p className="max-w-md leading-7 text-slate-600">Nous vous orientons vers la solution la plus cohérente avec votre projet, sans jargon inutile.</p></div><div className="mt-12 grid gap-5 lg:grid-cols-2">{services.map((service, index) => <article key={service.label} className="group relative min-h-[350px] overflow-hidden rounded-[2rem] bg-[#10271d] p-7 text-white sm:p-10"><div className={`absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-20 transition duration-700 group-hover:scale-105 ${index === 1 ? 'grayscale' : ''}`} /><div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,39,29,.25),rgba(16,39,29,.93))]" /><div className="relative flex h-full flex-col items-start"><p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c9efa6]">{service.label}</p><h3 className="mt-auto max-w-lg text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">{service.title}</h3><p className="mt-4 max-w-lg leading-7 text-white/75">{service.text}</p><Link href={service.href} className="mt-7 inline-flex items-center gap-2 font-bold text-[#d6f5bb] transition group-hover:gap-3">Découvrir la solution <ArrowUpRight size={18} /></Link></div></article>)}</div></div></section>;
+}
