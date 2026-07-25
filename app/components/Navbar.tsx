@@ -25,7 +25,7 @@ export default function Navbar() {
         <span className="relative inline-flex max-w-5xl flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs sm:text-sm">
           <Droplets size={17} className="hidden text-[#c9efa6] sm:block" />
           <span className="font-bold uppercase tracking-[0.18em] text-[#c9efa6]">Guide 30 jours</span>
-          <span className="text-white/85">Le rythme d&apos;arrosage à adapter après votre hydroseeding.</span>
+          <span className="text-white/85">Le rythme d&apos;irrigation à adapter après votre hydroseeding.</span>
           <span className="inline-flex items-center gap-1 font-semibold text-white transition group-hover:gap-2">Voir le guide <ArrowRight size={15} /></span>
         </span>
       </Link>

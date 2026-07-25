@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const questions = [
   { question: "À quels terrains l’hydroseeding convient-il ?", answer: "La technique est particulièrement pertinente pour les talus, grandes surfaces, chantiers, sols sensibles et zones difficiles d’accès. L’étude du terrain permet de confirmer la solution la plus adaptée." },
   { question: "Quand voit-on les premières pousses ?", answer: "La germination varie selon les semences, la saison, la météo et l’irrigation. Les premières pousses peuvent apparaître entre une et trois semaines dans de bonnes conditions." },
-  { question: "Faut-il arroser après l’intervention ?", answer: "Oui. Durant la phase de germination, il est important de maintenir le paillis humide sans le détremper. Notre guide d’irrigation vous donne des repères simples à adapter à la météo." },
+  { question: "Faut-il irriguer après l’intervention ?", answer: "Oui. Durant la phase de germination, il est important de maintenir le paillis humide sans le détremper. Notre guide d’irrigation vous donne des repères simples à adapter à la météo." },
   { question: "Préparez-vous systématiquement le terrain ?", answer: "Non. Nous évaluons d’abord le terrain et réalisons uniquement les interventions nécessaires pour créer de bonnes conditions d’implantation." },
 ];
 
