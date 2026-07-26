@@ -21,7 +21,7 @@ export default function HydroseedingPage() {
         label="Hydroseeding"
         title={<>Faire partir une végétation adaptée, même sur des terrains exigeants.</>}
         description="L'hydroseeding projette, en une seule application, un mélange d'eau, de semences et de fibres de paillage. Chaque mélange est ajusté à la réalité du terrain."
-        imageSrc="/images/v4/hydroseeding-levee-wide-optimized.jpg"
+        imageSrc="/images/v4/hydroseeding-hero-ai-4k.jpg"
         imageAlt="Camion d'hydroseeding intervenant sur un talus"
         primaryAction={{ href: "/terrain", label: "Mesure de terrain" }}
         secondaryAction={{ href: "/guide-irrigation", label: "Voir le guide d'irrigation" }}

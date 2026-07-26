@@ -22,7 +22,7 @@ export default function HydromulchingPage() {
         label="Hydromulching"
         title={<>Protéger le sol pendant que la végétation s&apos;installe.</>}
         description="L'hydromulching forme une couverture fibreuse projetée sur le terrain. Elle aide à limiter l'impact de la pluie, du vent et du dessèchement sur les surfaces sensibles."
-        imageSrc="/images/v4/hydroseeding-levee-detail-optimized.jpg"
+        imageSrc="/images/v4/hydromulching-hero-ai-4k.jpg"
         imageAlt="Application hydraulique sur un talus exposé"
         primaryAction={{ href: "/terrain", label: "Mesure de terrain" }}
         secondaryAction={{ href: "/hydroseeding", label: "Voir l'hydroseeding" }}
