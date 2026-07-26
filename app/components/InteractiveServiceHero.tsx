@@ -156,6 +156,10 @@ export default function InteractiveServiceHero({
         <Move size={15} className={dragging ? "text-[#c9efa6]" : ""} />
         Cliquez et déplacez l&apos;image
       </div>
+      <div className="pointer-events-none absolute bottom-7 left-6 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55 sm:left-8 lg:left-12">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#c9efa6]" />
+        Visuel illustratif
+      </div>
     </section>
   );
 }
