@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Check, CloudRain, Droplets, Sun, Wind } from "lucide-react";
+import { Check, CloudRain, Droplets, Sun, Wind } from "lucide-react";
 
 export const metadata = {
   title: "Guide d'irrigation après hydroseeding | Hydrovert Solutions",
@@ -17,7 +17,7 @@ export default function GuideIrrigationPage() {
   return (
     <main className="min-h-screen bg-[#f7f8f4] text-[#18241d]">
       <section className="bg-[#10271d] px-6 pb-20 pt-32 text-white sm:px-8 lg:px-12 lg:pt-40">
-        <div className="mx-auto max-w-7xl"><Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-[#c9efa6] hover:text-white"><ArrowLeft size={17}/>Retour à l&apos;accueil</Link><p className="mt-12 text-xs font-bold uppercase tracking-[.25em] text-[#c9efa6]">Guide d&apos;irrigation · 30 jours</p><h1 className="mt-5 max-w-5xl text-4xl font-semibold tracking-[-.05em] sm:text-5xl lg:text-7xl">Après l&apos;hydroseeding, l&apos;irrigation fait la différence.</h1><p className="mt-7 max-w-3xl text-lg leading-8 text-white/75 sm:text-xl">Ce guide donne des repères généraux. Le bon rythme dépend toujours du sol, de l&apos;exposition, du vent, de la pluie et du débit de votre installation d&apos;irrigation.</p></div>
+        <div className="mx-auto max-w-7xl"><p className="text-xs font-bold uppercase tracking-[.25em] text-[#c9efa6]">Guide d&apos;irrigation · 30 jours</p><h1 className="mt-5 max-w-5xl text-4xl font-semibold tracking-[-.05em] sm:text-5xl lg:text-7xl">Après l&apos;hydroseeding, l&apos;irrigation fait la différence.</h1><p className="mt-7 max-w-3xl text-lg leading-8 text-white/75 sm:text-xl">Ce guide donne des repères généraux. Le bon rythme dépend toujours du sol, de l&apos;exposition, du vent, de la pluie et du débit de votre installation d&apos;irrigation.</p></div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24"><div className="mb-10 max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.24em] text-[#4f7e31]">Le réflexe à garder</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.04em] sm:text-4xl">Humide au toucher. Jamais saturé.</h2><p className="mt-5 text-lg leading-8 text-slate-600">Touchez le paillage : il doit rester humide, sans flaques et sans eau qui s&apos;écoule. C&apos;est plus fiable qu&apos;un nombre de minutes identique pour tous les terrains.</p></div><div className="grid gap-px overflow-hidden rounded-3xl border border-[#dbe5d4] bg-[#dbe5d4] md:grid-cols-2">{phases.map((phase) => <article key={phase.period} className="bg-white p-7 sm:p-9"><p className="text-sm font-bold uppercase tracking-[.18em] text-[#79a65d]">{phase.period}</p><p className="mt-6 text-3xl font-semibold tracking-[-.04em] text-[#315c2b]">{phase.frequency}</p><h3 className="mt-7 text-2xl font-semibold">{phase.title}</h3><p className="mt-4 leading-7 text-slate-600">{phase.text}</p><p className="mt-5 border-l-2 border-[#a9cf91] pl-4 text-sm leading-6 text-slate-600">{phase.note}</p></article>)}</div></section>

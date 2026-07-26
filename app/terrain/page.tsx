@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, Map, Ruler, Send, ShieldCheck, Upload, X } from "lucide-react";
+import { ArrowRight, Check, Map, Ruler, Send, ShieldCheck, Upload, X } from "lucide-react";
 import { ChangeEvent, FormEvent, useState } from "react";
 import TerrainMap from "../components/TerrainMap";
 
@@ -31,10 +31,7 @@ export default function TerrainPage() {
     <main className="min-h-screen bg-[#f7f8f4] text-[#18241d]">
       <section className="bg-[#10271d] px-6 pb-16 pt-36 text-white sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#c9efa6] transition hover:text-white">
-            <ArrowLeft size={16} /> Retour à l&apos;accueil
-          </Link>
-          <div className="mt-12 max-w-4xl">
+          <div className="max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#c9efa6]">Étude de terrain Hydrovert</p>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-6xl lg:text-7xl">Préparons une intervention adaptée à votre terrain.</h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">Quelques informations suffisent pour nous aider à comprendre votre projet. Cette démarche ne génère pas de devis automatique : elle transmet votre terrain à notre équipe.</p>
