@@ -130,7 +130,7 @@ export default function InteractiveServiceHero({
           <motion.p variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65 } } }} className="text-base font-extrabold uppercase tracking-[0.32em] text-[#c9efa6] sm:text-lg">
             {label}
           </motion.p>
-          <motion.h1 variants={{ hidden: { opacity: 0, y: 34 }, visible: { opacity: 1, y: 0, transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] } } }} className="mt-5 max-w-5xl text-5xl font-semibold tracking-[-0.065em] sm:text-6xl lg:text-[6.3rem] lg:leading-[.91]">
+          <motion.h1 variants={{ hidden: { opacity: 0, y: 34 }, visible: { opacity: 1, y: 0, transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] } } }} className="mt-5 max-w-5xl text-5xl font-semibold tracking-[-0.065em] sm:text-6xl lg:text-[5rem] lg:leading-[.93] xl:text-[6.3rem] xl:leading-[.91]">
             {title}
           </motion.h1>
           <motion.p variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.75 } } }} className="mt-8 max-w-2xl text-lg leading-8 text-white/85 sm:text-xl">
