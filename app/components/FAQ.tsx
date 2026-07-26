@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 const questions = [
   { question: "À quels terrains l’hydroseeding convient-il ?", answer: "La technique est particulièrement pertinente pour les talus, grandes surfaces, chantiers, sols sensibles et zones difficiles d’accès. L’étude du terrain permet de confirmer la solution la plus adaptée." },
@@ -12,5 +13,5 @@ const questions = [
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
-  return <section className="bg-[#f6f8f3] py-20 sm:py-24 lg:py-28"><div className="mx-auto w-full max-w-4xl px-6 sm:px-8"><div className="text-center"><p className="text-xs font-bold uppercase tracking-[0.24em] text-[#4f7e31]">Questions fréquentes</p><h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#18241d] sm:text-5xl">Les réponses utiles, sans jargon.</h2></div><div className="mt-12 divide-y divide-[#dbe3d5] rounded-[1.5rem] border border-[#dbe3d5] bg-white px-5 sm:px-7">{questions.map((item, index) => <div key={item.question}><button onClick={() => setOpen(open === index ? null : index)} aria-expanded={open === index} className="flex w-full items-center justify-between gap-6 py-6 text-left"><span className="text-lg font-semibold text-[#18241d]">{item.question}</span><ChevronDown className={`shrink-0 text-[#4f7e31] transition ${open === index ? 'rotate-180' : ''}`} /></button>{open === index && <p className="max-w-3xl pb-6 leading-7 text-slate-600">{item.answer}</p>}</div>)}</div></div></section>;
+  return <section className="bg-[#f6f8f3] py-20 sm:py-24 lg:py-28"><div className="mx-auto w-full max-w-4xl px-6 sm:px-8"><div className="text-center"><p className="text-xs font-bold uppercase tracking-[0.24em] text-[#4f7e31]">Questions fréquentes</p><h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#18241d] sm:text-5xl">Les réponses utiles, sans jargon.</h2></div><div className="mt-12 divide-y divide-[#dbe3d5] rounded-[1.5rem] border border-[#dbe3d5] bg-white px-5 sm:px-7">{questions.map((item, index) => <div key={item.question}><button onClick={() => setOpen(open === index ? null : index)} aria-expanded={open === index} className="flex w-full items-center justify-between gap-6 py-6 text-left"><span className="text-lg font-semibold text-[#18241d]">{item.question}</span><ChevronDown className={`shrink-0 text-[#4f7e31] transition ${open === index ? 'rotate-180' : ''}`} /></button>{open === index && <p className="max-w-3xl pb-6 leading-7 text-slate-600">{item.answer}</p>}</div>)}</div><Link href="/guide-irrigation" className="mt-6 inline-flex items-center text-sm font-semibold text-[#315c2b] transition hover:text-[#10271d] hover:underline">Après un hydroseeding, consultez le guide d&apos;irrigation sur 30 jours →</Link></div></section>;
 }

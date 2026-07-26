@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,24,15,.94)_0%,rgba(7,24,15,.78)_42%,rgba(7,24,15,.22)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(169,223,118,.16),transparent_32%)]" />
 
-      <div className="relative mx-auto flex min-h-[740px] w-full max-w-7xl items-center px-6 pb-16 pt-40 sm:min-h-[780px] sm:px-8 lg:px-12">
+      <div className="relative mx-auto flex min-h-[740px] w-full max-w-7xl items-center px-6 pb-16 pt-28 sm:min-h-[780px] sm:px-8 sm:pt-32 lg:px-12">
         <div className="max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.21em] text-[#c9efa6] sm:text-sm">Hydroseeding · Hydromulching · Anti-érosion</p>
           <h1 className="mt-6 text-5xl font-semibold leading-[0.98] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
