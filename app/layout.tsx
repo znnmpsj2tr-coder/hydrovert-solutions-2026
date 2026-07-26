@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import FaqBubble from "./components/FaqBubble";
+import PageBackLink from "./components/PageBackLink";
 
 export const metadata: Metadata = {
   title: "Hydrovert Solutions | Revégétalisation sur mesure",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
-      <body>{children}<FaqBubble /></body>
+      <body><PageBackLink />{children}<FaqBubble /></body>
     </html>
   );
 }

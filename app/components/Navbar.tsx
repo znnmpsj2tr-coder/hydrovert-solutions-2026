@@ -6,7 +6,6 @@ import { ArrowRight, Droplets, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  { href: "/terrain", label: "Étudier mon terrain" },
   { href: "/hydroseeding", label: "Hydroseeding" },
   { href: "/hydromulching", label: "Hydromulching" },
   { href: "/applications", label: "Applications" },
@@ -45,6 +44,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <Link href="/terrain" className="hidden rounded-full border border-[#c9efa6]/60 bg-[#10271d]/40 px-4 py-2.5 text-sm font-bold text-[#e8f8d9] transition hover:bg-[#c9efa6]/15 sm:inline-flex">Mesure de terrain</Link>
           <Link href="/devis" className="rounded-full bg-[#c0ea93] px-4 py-2.5 text-sm font-bold text-[#10271d] transition hover:bg-white sm:px-5">Demander un devis</Link>
           <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Ouvrir le menu" className="rounded-full border border-white/20 bg-[#10271d]/70 p-2.5 text-white backdrop-blur lg:hidden">
             {open ? <X size={20} /> : <Menu size={20} />}
@@ -55,6 +55,10 @@ export default function Navbar() {
       {open && (
         <div className="mx-4 rounded-2xl border border-white/10 bg-[#10271d]/95 p-4 shadow-2xl backdrop-blur lg:hidden">
           <div className="flex flex-col">
+            <div className="grid grid-cols-2 gap-2 border-b border-white/10 pb-3">
+              <Link href="/terrain" onClick={() => setOpen(false)} className="rounded-xl border border-[#c9efa6]/40 px-3 py-3 text-center text-xs font-bold text-[#c9efa6]">Mesure de terrain</Link>
+              <Link href="/devis" onClick={() => setOpen(false)} className="rounded-xl bg-[#c0ea93] px-3 py-3 text-center text-xs font-bold text-[#10271d]">Demander un devis</Link>
+            </div>
             {links.map((link) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="border-b border-white/10 px-3 py-4 text-sm font-medium text-white/85">{link.label}</Link>)}
             <Link href="/guide-irrigation" onClick={() => setOpen(false)} className="px-3 py-4 text-sm font-semibold text-[#c9efa6]">Guide d&apos;irrigation</Link>
           </div>
