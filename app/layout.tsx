@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import FaqBubble from "./components/FaqBubble";
+import MotionProgress from "./components/MotionProgress";
 import PageBackLink from "./components/PageBackLink";
 
 export const metadata: Metadata = {
@@ -19,7 +20,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
-      <body><PageBackLink />{children}<FaqBubble /></body>
+      <body>
+        <MotionProgress />
+        <PageBackLink />
+        {children}
+        <FaqBubble />
+      </body>
     </html>
   );
 }

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Originaux de travail conservés localement : le site utilise les versions optimisées.
+/public/images/v4/hydroseeding-levee-detail.jpg
+/public/images/v4/hydroseeding-levee-wide.jpg
+/public/images/v4/hydroseeding-field.jpg
+/public/images/v4/hydroseeding-field-optimized.jpg

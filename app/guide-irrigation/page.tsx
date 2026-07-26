@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Check, CloudRain, Droplets, Sun, Wind } from "lucide-react";
 
 export const metadata = {

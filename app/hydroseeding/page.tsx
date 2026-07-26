@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Droplets, Sprout, Waves } from "lucide-react";
+import { Droplets, Sprout, Waves } from "lucide-react";
+import InteractiveServiceHero from "../components/InteractiveServiceHero";
 
 export const metadata = {
   title: "Hydroseeding | Hydrovert Solutions",
@@ -16,15 +17,15 @@ const steps = [
 export default function HydroseedingPage() {
   return (
     <main className="overflow-hidden bg-[#f7f8f4] text-[#18241d]">
-      <section className="relative bg-[#10271d] px-6 pb-20 pt-32 text-white sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(192,234,147,.2),transparent_26%)]" />
-        <div className="relative mx-auto max-w-7xl">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#c9efa6]">Hydroseeding</p>
-          <h1 className="mt-5 max-w-5xl text-4xl font-semibold tracking-[-0.05em] sm:text-5xl lg:text-7xl">Faire partir une végétation adaptée, même sur des terrains exigeants.</h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">L&apos;hydroseeding projette, en une seule application, un mélange d&apos;eau, de semences et de fibres de paillage. Chaque mélange est ajusté à la réalité du terrain.</p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row"><Link href="/devis" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c0ea93] px-6 py-3.5 font-bold text-[#10271d] transition hover:bg-white">Demander une étude <ArrowRight size={18} /></Link><Link href="/guide-irrigation" className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3.5 font-semibold transition hover:bg-white/10">Voir le guide d&apos;irrigation</Link></div>
-        </div>
-      </section>
+      <InteractiveServiceHero
+        label="Hydroseeding"
+        title={<>Faire partir une végétation adaptée, même sur des terrains exigeants.</>}
+        description="L'hydroseeding projette, en une seule application, un mélange d'eau, de semences et de fibres de paillage. Chaque mélange est ajusté à la réalité du terrain."
+        imageSrc="/images/v4/hydroseeding-levee-wide-optimized.jpg"
+        imageAlt="Camion d'hydroseeding intervenant sur un talus"
+        primaryAction={{ href: "/terrain", label: "Mesure de terrain" }}
+        secondaryAction={{ href: "/guide-irrigation", label: "Voir le guide d'irrigation" }}
+      />
 
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[1fr_.9fr] lg:px-12 lg:py-28">
         <div><p className="text-xs font-bold uppercase tracking-[0.24em] text-[#4f7e31]">Une méthode, pas une promesse magique</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Ce que fait l&apos;hydroseeding.</h2></div>

@@ -1,3 +1,8 @@
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/manrope/800.css";
 @import "tailwindcss";
 
 :root {
@@ -13,7 +18,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 
 ::selection { background: #b7dc91; color: #10271d; }
@@ -22,6 +27,31 @@ body {
   from { transform: scale(1.04); }
   to { transform: scale(1.12); }
 }
+
+.grain-overlay {
+  background-image:
+    radial-gradient(circle at 25% 20%, rgb(255 255 255 / 8%) 0 0.7px, transparent 0.9px),
+    radial-gradient(circle at 70% 60%, rgb(255 255 255 / 7%) 0 0.6px, transparent 0.9px);
+  background-size: 5px 5px, 7px 7px;
+  mix-blend-mode: soft-light;
+}
+
+@keyframes hydrovert-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hydrovert-marquee {
+  animation: hydrovert-marquee 26s linear infinite;
+  width: max-content;
+}
+
+@keyframes soft-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+}
+
+.soft-float { animation: soft-float 5s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }

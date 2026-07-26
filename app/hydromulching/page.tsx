@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Check, Droplets, Layers3, ShieldCheck, Wind } from "lucide-react";
+import { Check, Droplets, Layers3, ShieldCheck, Wind } from "lucide-react";
+import InteractiveServiceHero from "../components/InteractiveServiceHero";
 
 export const metadata = {
   title: "Hydromulching | Hydrovert Solutions",
@@ -17,32 +18,16 @@ const uses = [
 export default function HydromulchingPage() {
   return (
     <main className="overflow-hidden bg-[#f7f8f4] text-[#18241d]">
-      <section className="relative bg-[#10271d] px-6 pb-20 pt-32 text-white sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(192,234,147,.22),transparent_28%)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#c9efa6]">Hydromulching</p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.05em] sm:text-5xl lg:text-7xl">
-              Protéger le sol pendant que la végétation s&apos;installe.
-            </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">
-              L&apos;hydromulching forme une couverture fibreuse projetée sur le terrain. Elle aide à limiter l&apos;impact de la pluie, du vent et du dessèchement sur les surfaces sensibles.
-            </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/devis" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c0ea93] px-6 py-3.5 font-bold text-[#10271d] transition hover:bg-white">
-                Étudier mon terrain <ArrowRight size={18} />
-              </Link>
-              <Link href="/hydroseeding" className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3.5 font-semibold transition hover:bg-white/10">
-                Voir l&apos;hydroseeding
-              </Link>
-            </div>
-          </div>
-          <div className="rounded-3xl border border-white/15 bg-white/[.07] p-7 backdrop-blur sm:p-9">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#c9efa6]">En bref</p>
-            <p className="mt-5 text-2xl font-medium leading-9">Eau + fibres de paillage + liant, avec ou sans semences selon l&apos;objectif du chantier.</p>
-          </div>
-        </div>
-      </section>
+      <InteractiveServiceHero
+        label="Hydromulching"
+        title={<>Protéger le sol pendant que la végétation s&apos;installe.</>}
+        description="L'hydromulching forme une couverture fibreuse projetée sur le terrain. Elle aide à limiter l'impact de la pluie, du vent et du dessèchement sur les surfaces sensibles."
+        imageSrc="/images/v4/hydroseeding-levee-detail-optimized.jpg"
+        imageAlt="Application hydraulique sur un talus exposé"
+        primaryAction={{ href: "/terrain", label: "Mesure de terrain" }}
+        secondaryAction={{ href: "/hydroseeding", label: "Voir l'hydroseeding" }}
+        aside={<><p className="text-sm font-bold uppercase tracking-[0.2em] text-[#c9efa6]">En bref</p><p className="mt-5 text-2xl font-medium leading-9">Eau + fibres de paillage + liant, avec ou sans semences selon l&apos;objectif du chantier.</p></>}
+      />
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
